@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Gross Pay</h1><br>
+    <script>
+        for(let i=0;i<3;i++){
+            var name=prompt("Enter the name of employye "+(i+1)+":","")
+            var hr=prompt("Enter the amount of time worked by "+name+" in Hrs:","")
+            var rate=prompt("Enter the hourly rate of "+name+" :","")
+
+            var pay
+            if(hr<=40){
+                pay=rate*hr
+            }else{
+                pay=(rate*40)+((hr-40)*rate*1.5)
+            }
+            document.writeln(`Pay of ${name} = ${pay}Rs. <br>`)
+        }
+    </script>
+    
+</body>
+</html>

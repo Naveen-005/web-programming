@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Username:
+        <input type="text" name="uname" id="uname"/><br><br>
+        Password:
+        <input type="password" name="pass" id="pass"> <br><br>
+
+        <input type="submit" value="Validate" onclick="validate()">
+    </form>
+
+    <script>
+        function validate(){
+            var uname=document.getElementById("uname").value
+            var password=document.getElementById("pass").value
+            if(uname==="" || uname===null){
+                alert("Username must not be blank")
+            }else if(password.length<6){
+                alert("Password must not be less than 6 characters ")
+            }
+            else{
+                alert("Details Verified")
+            }
+        }
+    </script>
+</body>
+</html>
